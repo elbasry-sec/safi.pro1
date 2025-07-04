@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شخصيات صراع العروش | Game of Thrones Characters</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .characters-hero {
+      background: linear-gradient(rgba(24,24,24,0.8), rgba(24,24,24,0.8)), url('../assets/images/Game of Thrones - Wallpaper.jpeg') center center/cover no-repeat;
+      min-height: 38vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 8px 32px #b71c1c55;
+      margin-bottom: 32px;
+    }
+    .characters-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      color: #ffd700;
+      text-shadow: 0 2px 24px #b71c1c, 0 0 8px #fff;
+      margin-bottom: 0.3em;
+    }
+    .characters-hero p {
+      font-size: 1.25rem;
+      color: #ffebee;
+      max-width: 700px;
+      margin: 0 auto 1.2em auto;
+    }
+    .characters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.7rem;
+      padding: 2.5rem 2vw 4rem 2vw;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .character-card {
+      background: rgba(24, 18, 18, 0.72);
+      border-radius: 32px;
+      box-shadow: 0 10px 48px #b71c1c55, 0 0 0 8px #ffd70033, 0 0 32px 8px #b71c1c44;
+      color: #fff;
+      padding: 2.2em 1.2em 2.2em 1.2em;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #ffd70088;
+      transition: transform 0.35s cubic-bezier(.4,2,.3,1), box-shadow 0.35s, background 0.3s;
+      cursor: pointer;
+    }
+    .character-card:hover {
+      transform: scale(1.08) rotate(-1.5deg) translateY(-10px);
+      box-shadow: 0 24px 64px #b71c1cbb, 0 0 0 12px #ffd70055;
+      background: rgba(40, 20, 20, 0.92);
+      z-index: 3;
+      animation: card-glow 0.7s;
+    }
+    @keyframes card-glow {
+      0% { box-shadow: 0 0 0 0 #ffd70000; }
+      60% { box-shadow: 0 0 32px 12px #ffd70077; }
+      100% { box-shadow: 0 24px 64px #b71c1cbb, 0 0 0 12px #ffd70055; }
+    }
+    .character-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ffd700;
+      margin-bottom: 1.1em;
+      box-shadow: 0 4px 32px #b71c1c77, 0 0 0 8px #ffd70033;
+      background: #181818;
+      transition: transform 0.35s cubic-bezier(.4,2,.3,1), box-shadow 0.35s;
+    }
+    .character-card:hover .character-img {
+      transform: scale(1.13) rotate(-2deg);
+      box-shadow: 0 8px 48px #ffd700cc, 0 0 0 16px #b71c1c44;
+      filter: brightness(1.08) saturate(1.2);
+    }
+    .character-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      color: #ffd700;
+      margin-bottom: 0.3em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .character-title {
+      color: #ff1744;
+      font-size: 1.18rem;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+    }
+    .character-house {
+      color: #ffb300;
+      font-size: 1.13rem;
+      margin-bottom: 0.3em;
+    }
+    .character-bio {
+      color: #eee;
+      font-size: 1.08rem;
+      margin-bottom: 0.7em;
+      min-height: 60px;
+    }
+    .character-quote {
+      color: #ffd700;
+      font-size: 1.08rem;
+      font-style: italic;
+      margin-top: 0.5em;
+      opacity: 0.92;
+    }
+  </style>
+</head>
+<body>
+<div id="header-include"></div>
+<section class="characters-hero">
+  <h1>شخصيات صراع العروش الأسطورية</h1>
+  <p>تعرف على أبرز الشخصيات التي صنعت ملحمة Game of Thrones. كل شخصية تحمل قصة، ماضٍ، طموح، وصراع خاص بها. استكشف عالم ويستروس من خلال أبطاله وخصومه!</p>
+</section>
+<section class="characters-grid">
+  <!-- شخصية: جون سنو -->
+  <div class="character-card">
+    <img src="../assets/images/Jon Snow.jpeg" alt="Jon Snow" class="character-img" />
+    <div class="character-name">جون سنو</div>
+    <div class="character-title">ملك الشمال | قائد الحرس الليلي</div>
+    <div class="character-house">آل ستارك</div>
+    <div class="character-bio">ابن نيد ستارك بالتبني، بطل ملحمي ذو أصول غامضة، رمز الشرف والتضحية في مواجهة الظلام.</div>
+    <div class="character-quote">"The things I do for love."</div>
+  </div>
+  <!-- شخصية: دينيريس -->
+  <div class="character-card">
+    <img src="../assets/images/_ (6).jpeg" alt="Daenerys Targaryen" class="character-img" />
+    <div class="character-name">دينيريس تارغاريان</div>
+    <div class="character-title">أم التنانين | ملكة ميرين</div>
+    <div class="character-house">آل تارغاريان</div>
+    <div class="character-bio">آخر الورثة الشرعيين لعرش ويستروس، رمز القوة والتحرر، صاحبة التنانين الثلاثة.</div>
+    <div class="character-quote">"I am not your little princess. I am Daenerys Stormborn of House Targaryen!"</div>
+  </div>
+  <!-- شخصية: تيريون -->
+  <div class="character-card">
+    <img src="../assets/images/Tyrion Lannister.jpeg" alt="Tyrion Lannister" class="character-img" />
+    <div class="character-name">تيريون لانستر</div>
+    <div class="character-title">يد الملك | مستشار</div>
+    <div class="character-house">آل لانستر</div>
+    <div class="character-bio">ذكي وساخر، أحد أكثر الشخصيات شعبية وتعقيداً، نجا من المكائد بفضل ذكائه ولسانه الحاد.</div>
+    <div class="character-quote">"I drink and I know things."</div>
+  </div>
+  <!-- شخصية: آريا -->
+  <div class="character-card">
+    <img src="../assets/images/Arya Stark.jpeg" alt="Arya Stark" class="character-img" />
+    <div class="character-name">آريا ستارك</div>
+    <div class="character-title">محاربة | لا وجه لها</div>
+    <div class="character-house">آل ستارك</div>
+    <div class="character-bio">محاربة شجاعة، تدربت مع الرجال بلا وجوه، رمز الانتقام والحرية.</div>
+    <div class="character-quote">"A girl has no name."</div>
+  </div>
+  <!-- شخصية: سانسا -->
+  <div class="character-card">
+    <img src="../assets/images/sansa stark icon.jpeg" alt="Sansa Stark" class="character-img" />
+    <div class="character-name">سانسا ستارك</div>
+    <div class="character-title">ملكة الشمال</div>
+    <div class="character-house">آل ستارك</div>
+    <div class="character-bio">من أميرة بريئة إلى ملكة الشمال، رمز الصمود والتطور في عالم قاسٍ.</div>
+    <div class="character-quote">"The lone wolf dies, but the pack survives."</div>
+  </div>
+  <!-- شخصية: سيرسي -->
+  <div class="character-card">
+    <img src="../assets/images/_ (7).jpeg" alt="Cersei Lannister" class="character-img" />
+    <div class="character-name">سيرسي لانستر</div>
+    <div class="character-title">ملكة الممالك السبع</div>
+    <div class="character-house">آل لانستر</div>
+    <div class="character-bio">ملكة قاسية وطموحة، مستعدة لفعل أي شيء من أجل السلطة.</div>
+    <div class="character-quote">"When you play the game of thrones, you win or you die."</div>
+  </div>
+  <!-- شخصية: جيمي -->
+  <div class="character-card">
+    <img src="../assets/images/_ (8).jpeg" alt="Jaime Lannister" class="character-img" />
+    <div class="character-name">جيمي لانستر</div>
+    <div class="character-title">الفارس الذهبي | قاتل الملك</div>
+    <div class="character-house">آل لانستر</div>
+    <div class="character-bio">الفارس الذهبي، قاتل الملك، شخصية معقدة بين الشرف والذنب.</div>
+    <div class="character-quote">"The things I do for love."</div>
+  </div>
+  <!-- شخصية: برين -->
+  <div class="character-card">
+    <img src="../assets/images/bran stark icon.jpeg" alt="Bran Stark" class="character-img" />
+    <div class="character-name">بران ستارك</div>
+    <div class="character-title">الغُراب ذو الثلاثة أعين</div>
+    <div class="character-house">آل ستارك</div>
+    <div class="character-bio">يمتلك قوى خارقة ورؤية الماضي والمستقبل، أصبح ملك الممالك الست في النهاية.</div>
+    <div class="character-quote">"I can never be lord of anything. I'm the Three-Eyed Raven."</div>
+  </div>
+  <!-- شخصية: ثيون -->
+  <div class="character-card">
+    <img src="../assets/images/_ (10).jpeg" alt="Theon Greyjoy" class="character-img" />
+    <div class="character-name">ثيون غريجوي</div>
+    <div class="character-title">وريث الحديديين</div>
+    <div class="character-house">آل غريجوي</div>
+    <div class="character-bio">شخصية مأساوية، عاش صراع هوية ومرّ بتجارب قاسية قبل أن يجد الخلاص.</div>
+    <div class="character-quote">"What is dead may never die."</div>
+  </div>
+  <!-- شخصية: جورا -->
+  <div class="character-card">
+    <img src="../assets/images/_ (11).jpeg" alt="Jorah Mormont" class="character-img" />
+    <div class="character-name">جورا مورمونت</div>
+    <div class="character-title">فارس | مستشار دينيريس</div>
+    <div class="character-house">آل مورمونت</div>
+    <div class="character-bio">فارس مخلص، ضحى بكل شيء من أجل دينيريس، رمز الولاء الحقيقي.</div>
+    <div class="character-quote">"Khaleesi, I have always loved you."</div>
+  </div>
+  <!-- شخصية: ميليساندري -->
+  <div class="character-card">
+    <img src="../assets/images/maly.jpeg" alt="Melisandre" class="character-img" />
+    <div class="character-name">ميليساندري</div>
+    <div class="character-title">الكاهنة الحمراء</div>
+    <div class="character-house">لا تنتمي لعائلة</div>
+    <div class="character-bio">كاهنة غامضة، تؤمن بإله النور، أثرت في مصير الممالك بقدراتها السحرية.</div>
+    <div class="character-quote">"The night is dark and full of terrors."</div>
+  </div>
+  <!-- شخصية: دافوس -->
+  <div class="character-card">
+    <img src="../assets/images/davos.jpeg" alt="دافوس سيوورث" class="character-img" />
+    <div class="character-name">دافوس سيوورث</div>
+    <div class="character-title">سيد البصل | مستشار</div>
+    <div class="character-house">لا ينتمي لعائلة</div>
+    <div class="character-bio">الفارس البسيط، رمز الولاء والحكمة.</div>
+    <div class="character-quote">"If we don't put aside our enmities and band together, we will die. And then it doesn't matter whose skeleton sits on the Iron Throne."</div>
+  </div>
+</section>
+<div id="footer-include"></div>
+<script>
+fetch('../components/header.html').then(r=>r.text()).then(t=>document.getElementById('header-include').innerHTML=t);
+fetch('../components/footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-include').innerHTML=t);
+</script>
+</body>
+</html> 

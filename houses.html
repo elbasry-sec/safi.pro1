@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عائلات صراع العروش | Game of Thrones Houses</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      background: #111;
+    }
+    .houses-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: 0;
+      background: url('../assets/images/_ (4).jpeg') center center/cover no-repeat;
+      opacity: 0.13;
+      pointer-events: none;
+    }
+    .houses-hero {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(rgba(24,24,24,0.85), rgba(24,24,24,0.85));
+      min-height: 32vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 8px 32px #b71c1c55;
+      margin-bottom: 32px;
+    }
+    .houses-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.7rem;
+      color: #ffd700;
+      text-shadow: 0 2px 24px #b71c1c, 0 0 8px #fff;
+      margin-bottom: 0.3em;
+    }
+    .houses-hero p {
+      font-size: 1.18rem;
+      color: #ffebee;
+      max-width: 700px;
+      margin: 0 auto 1.2em auto;
+    }
+    .houses-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+      padding: 2.5rem 2vw 4rem 2vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .house-card {
+      background: linear-gradient(135deg, #181818 80%, #b71c1c33 100%);
+      border-radius: 28px;
+      box-shadow: 0 8px 32px #b71c1c44, 0 0 0 6px #ffd70033;
+      color: #fff;
+      padding: 2.1em 1.3em 2.1em 1.3em;
+      text-align: center;
+      border: 3px solid #ffd70055;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      cursor: pointer;
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .house-card:hover {
+      transform: scale(1.04) rotate(-1deg) translateY(-8px);
+      box-shadow: 0 24px 64px #b71c1cbb, 0 0 0 12px #ffd70055;
+      background: linear-gradient(135deg, #2d0606 80%, #ffd70022 100%);
+      z-index: 3;
+    }
+    .house-name {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: #ffd700;
+      margin-bottom: 0.2em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .house-words {
+      color: #ffb300;
+      font-size: 1.18rem;
+      margin-bottom: 0.3em;
+      font-family: 'Cairo', Tahoma, Arial, sans-serif;
+      font-weight: bold;
+    }
+    .house-desc {
+      color: #eee;
+      font-size: 1.09rem;
+      margin-bottom: 0.7em;
+      min-height: 60px;
+      font-family: 'Cairo', Tahoma, Arial, sans-serif;
+    }
+    .house-symbol {
+      font-size: 2.2rem;
+      margin-bottom: 0.4em;
+      color: #ff1744;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px #b71c1c55;
+    }
+  </style>
+</head>
+<body>
+<div class="houses-bg"></div>
+<div id="header-include"></div>
+<section class="houses-hero">
+  <h1>عائلات ويستروس الأسطورية</h1>
+  <p>تعرف على أشهر العائلات النبيلة التي صنعت تاريخ ويستروس، لكل عائلة شعارها وكلماتها وقصتها الخاصة. من الشمال الجليدي إلى الجنوب الذهبي، هذه العائلات هي قلب لعبة العروش!</p>
+</section>
+<section class="houses-grid">
+  <div class="house-card">
+    <div class="house-symbol">🐺</div>
+    <div class="house-name">آل ستارك</div>
+    <div class="house-words">"Winter is Coming"</div>
+    <div class="house-desc">سادة الشمال وحماة وينترفيل. رمزهم الذئب الرهيب، ويجسدون الشرف والوفاء والصمود في وجه أقسى الظروف.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🦁</div>
+    <div class="house-name">آل لانستر</div>
+    <div class="house-words">"Hear Me Roar!"</div>
+    <div class="house-desc">أغنى عائلات ويستروس، يسيطرون على كاسترلي روك. رمزهم الأسد الذهبي، ويشتهرون بالدهاء والقوة والثراء.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🐉</div>
+    <div class="house-name">آل تارغاريان</div>
+    <div class="house-words">"Fire and Blood"</div>
+    <div class="house-desc">سلالة التنانين وحكام العرش الحديدي السابقون. رمزهم التنين ذو الرؤوس الثلاثة، ويجسدون القوة والغموض والنار.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🦌</div>
+    <div class="house-name">آل باراثيون</div>
+    <div class="house-words">"Ours is the Fury"</div>
+    <div class="house-desc">سادة ستورمز إند، رمزهم الأيل المتوج. عائلة قوية اشتهرت بالثورة والشجاعة والعناد.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🌹</div>
+    <div class="house-name">آل تيريل</div>
+    <div class="house-words">"Growing Strong"</div>
+    <div class="house-desc">سادة هايغاردن، رمزهم الوردة الذهبية. عائلة ذكية وثرية، بارعة في السياسة والتحالفات.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🐙</div>
+    <div class="house-name">آل غريجوي</div>
+    <div class="house-words">"We Do Not Sow"</div>
+    <div class="house-desc">سادة جزر الحديد، رمزهم الأخطبوط الذهبي. عائلة بحرية شرسة تعشق الحرية والغزو.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">☀️</div>
+    <div class="house-name">آل مارتيل</div>
+    <div class="house-words">"Unbowed, Unbent, Unbroken"</div>
+    <div class="house-desc">حكام دورن في الجنوب، رمزهم الشمس المثقوبة بالرمح. عائلة عنيدة وفخورة، لا تنكسر ولا تخضع.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🐟</div>
+    <div class="house-name">آل تولي</div>
+    <div class="house-words">"Family, Duty, Honor"</div>
+    <div class="house-desc">سادة ريفررن، رمزهم السمكة الفضية. عائلة وفية تضع العائلة والشرف فوق كل شيء.</div>
+  </div>
+  <div class="house-card">
+    <div class="house-symbol">🦅</div>
+    <div class="house-name">آل آرين</div>
+    <div class="house-words">"As High as Honor"</div>
+    <div class="house-desc">سادة الوادي وحصن النسور. رمزهم الصقر والهلال، ويجسدون الشرف والعلو والاستقلالية.</div>
+  </div>
+</section>
+<div id="footer-include"></div>
+<script>
+fetch('../components/header.html').then(r=>r.text()).then(t=>document.getElementById('header-include').innerHTML=t);
+fetch('../components/footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-include').innerHTML=t);
+</script>
+</body>
+</html> 

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خريطة ويستروس وإيسوس | Game of Thrones Map</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body {
+      background: #0a0a0a;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .map-hero {
+      text-align: center;
+      color: #ffd700;
+      font-family: 'Cinzel', serif;
+      margin: 2.5em 0 1.2em 0;
+      font-size: 2.3rem;
+      text-shadow: 0 2px 24px #b71c1c, 0 0 8px #fff;
+    }
+    .map-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 2.5em;
+    }
+    .got-map-img {
+      width: 90vw;
+      max-width: 600px;
+      border-radius: 32px;
+      box-shadow: 0 8px 48px #b71c1c99, 0 0 0 8px #ffd70033;
+      margin-bottom: 2.5em;
+      opacity: 0.97;
+      border: 4px solid #ffd70055;
+      background: #222;
+      z-index: 1;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .got-map-img:hover {
+      box-shadow: 0 24px 96px #b71c1cdd, 0 0 0 16px #ffd70055;
+      transform: scale(1.03) rotate(-1deg);
+    }
+    .houses-map-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.2rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto 2.5em auto;
+      z-index: 2;
+      position: relative;
+    }
+    .house-card-map {
+      background: linear-gradient(135deg, #181818 80%, #b71c1c33 100%);
+      border-radius: 28px;
+      box-shadow: 0 8px 32px #b71c1c44, 0 0 0 6px #ffd70033;
+      color: #fff;
+      padding: 1.7em 1.1em 1.7em 1.1em;
+      text-align: center;
+      border: 3px solid #ffd70055;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      cursor: pointer;
+      min-width: 260px;
+      max-width: 320px;
+      flex: 1 1 300px;
+      margin-bottom: 0.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Cairo', Tahoma, Arial, sans-serif;
+    }
+    .house-card-map:hover {
+      transform: scale(1.04) rotate(-1deg) translateY(-8px);
+      box-shadow: 0 24px 64px #b71c1cbb, 0 0 0 12px #ffd70055;
+      background: linear-gradient(135deg, #2d0606 80%, #ffd70022 100%);
+      z-index: 3;
+    }
+    .house-symbol {
+      font-size: 2.2rem;
+      margin-bottom: 0.4em;
+      color: #ff1744;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px #b71c1c55;
+    }
+    .house-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      color: #ffd700;
+      margin-bottom: 0.2em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .house-region {
+      color: #ffb300;
+      font-size: 1.08rem;
+      margin-bottom: 0.2em;
+      font-family: 'Cairo', Tahoma, Arial, sans-serif;
+      font-weight: bold;
+    }
+    .house-desc {
+      color: #eee;
+      font-size: 1.01rem;
+      margin-bottom: 0.5em;
+      min-height: 48px;
+      font-family: 'Cairo', Tahoma, Arial, sans-serif;
+    }
+    @media (max-width: 900px) {
+      .got-map-img { max-width: 98vw; }
+      .houses-map-grid { gap: 1.2rem 0.7rem; }
+      .house-card-map { min-width: 90vw; max-width: 99vw; }
+    }
+  </style>
+</head>
+<body>
+<div id="header-include"></div>
+<div class="map-hero">خريطة عالم صراع العروش الأسطوري</div>
+<div class="map-container">
+  <img src="../assets/images/_ (5).jpeg" alt="خريطة ويستروس وإيسوس" class="got-map-img fade-in loaded" />
+</div>
+<div class="houses-map-grid">
+  <div class="house-card-map">
+    <div class="house-symbol">🐺</div>
+    <div class="house-name">آل ستارك</div>
+    <div class="house-region">الشمال (وينترفيل)</div>
+    <div class="house-desc">سادة الشمال، يعيشون في وينترفيل وسط الثلوج. رمزهم الذئب الرهيب، ويجسدون الشرف والصمود في أقسى الظروف.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🦁</div>
+    <div class="house-name">آل لانستر</div>
+    <div class="house-region">الغرب (كاسترلي روك)</div>
+    <div class="house-desc">أغنى عائلات ويستروس، يسيطرون على كاسترلي روك قرب البحر الغربي. رمزهم الأسد الذهبي، ويشتهرون بالدهاء والقوة.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🐉</div>
+    <div class="house-name">آل تارغاريان</div>
+    <div class="house-region">العرش الحديدي (كينغز لاندينغ سابقاً)</div>
+    <div class="house-desc">سلالة التنانين، حكموا من كينغز لاندينغ. رمزهم التنين ذو الرؤوس الثلاثة، ويجسدون القوة والغموض والنار.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🦌</div>
+    <div class="house-name">آل باراثيون</div>
+    <div class="house-region">الجنوب (ستورمز إند)</div>
+    <div class="house-desc">سادة ستورمز إند على الساحل الجنوبي. رمزهم الأيل المتوج، ويشتهرون بالشجاعة والعناد والثورة.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🌹</div>
+    <div class="house-name">آل تيريل</div>
+    <div class="house-region">الجنوب الغربي (هايغاردن)</div>
+    <div class="house-desc">سادة هايغاردن في الأراضي الخصبة جنوب غرب ويستروس. رمزهم الوردة الذهبية، بارعون في السياسة والتحالفات.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🐙</div>
+    <div class="house-name">آل غريجوي</div>
+    <div class="house-region">جزر الحديد (غرب ويستروس)</div>
+    <div class="house-desc">سادة جزر الحديد في الغرب. رمزهم الأخطبوط الذهبي، عائلة بحرية شرسة تعشق الحرية والغزو.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">☀️</div>
+    <div class="house-name">آل مارتيل</div>
+    <div class="house-region">الجنوب (دورن)</div>
+    <div class="house-desc">حكام دورن في أقصى الجنوب. رمزهم الشمس المثقوبة بالرمح، عائلة عنيدة وفخورة لا تنكسر ولا تخضع.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🐟</div>
+    <div class="house-name">آل تولي</div>
+    <div class="house-region">الوسط (ريفررن)</div>
+    <div class="house-desc">سادة ريفررن في قلب ويستروس. رمزهم السمكة الفضية، عائلة وفية تضع العائلة والشرف فوق كل شيء.</div>
+  </div>
+  <div class="house-card-map">
+    <div class="house-symbol">🦅</div>
+    <div class="house-name">آل آرين</div>
+    <div class="house-region">الشرق (الوادي وحصن النسور)</div>
+    <div class="house-desc">سادة الوادي وحصن النسور في الشرق. رمزهم الصقر والهلال، ويجسدون الشرف والعلو والاستقلالية.</div>
+  </div>
+</div>
+<div id="footer-include"></div>
+<script>
+fetch('../components/header.html').then(r=>r.text()).then(t=>document.getElementById('header-include').innerHTML=t);
+fetch('../components/footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-include').innerHTML=t);
+</script>
+</body>
+</html> 

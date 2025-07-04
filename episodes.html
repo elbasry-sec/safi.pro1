@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حلقات صراع العروش | Game of Thrones Episodes</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .episodes-hero {
+      background: linear-gradient(rgba(24,24,24,0.8), rgba(24,24,24,0.8)), url('../assets/images/Game of Thrones - Wallpaper.jpeg') center center/cover no-repeat;
+      min-height: 38vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 8px 32px #b71c1c55;
+      margin-bottom: 32px;
+    }
+    .episodes-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      color: #ffd700;
+      text-shadow: 0 2px 24px #b71c1c, 0 0 8px #fff;
+      margin-bottom: 0.3em;
+    }
+    .episodes-hero p {
+      font-size: 1.25rem;
+      color: #ffebee;
+      max-width: 700px;
+      margin: 0 auto 1.2em auto;
+    }
+    .seasons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.7rem;
+      padding: 2.5rem 2vw 4rem 2vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .season-card {
+      background: linear-gradient(135deg, #181818 80%, #b71c1c33 100%);
+      border-radius: 36px;
+      box-shadow: 0 10px 48px #b71c1c77, 0 0 0 8px #ffd70033, 0 0 32px 8px #b71c1c44;
+      color: #fff;
+      padding: 2.5em 1.5em 2.5em 1.5em;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 4px solid #ffd700bb;
+      transition: transform 0.35s cubic-bezier(.4,2,.3,1), box-shadow 0.35s, background 0.3s;
+      cursor: pointer;
+      min-height: 650px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .season-card:hover {
+      transform: scale(1.045) rotate(-1.5deg) translateY(-10px);
+      box-shadow: 0 32px 80px #b71c1cdd, 0 0 0 16px #ffd70077;
+      background: linear-gradient(135deg, #2d0606 80%, #ffd70022 100%);
+      z-index: 3;
+      animation: card-glow 0.7s;
+    }
+    @keyframes card-glow {
+      0% { box-shadow: 0 0 0 0 #ffd70000; }
+      60% { box-shadow: 0 0 64px 24px #ffd70077; }
+      100% { box-shadow: 0 32px 80px #b71c1cdd, 0 0 0 16px #ffd70077; }
+    }
+    .season-img {
+      width: 100%;
+      max-width: 340px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 22px;
+      border: 4px solid #ffd700;
+      margin-bottom: 1.2em;
+      box-shadow: 0 4px 32px #b71c1c77, 0 0 0 8px #ffd70033;
+      background: #181818;
+      transition: transform 0.35s cubic-bezier(.4,2,.3,1), box-shadow 0.35s;
+    }
+    .season-card:hover .season-img {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 48px #ffd700cc, 0 0 0 16px #b71c1c44;
+      filter: brightness(1.08) saturate(1.2);
+    }
+    .season-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.1rem;
+      color: #ffd700;
+      margin-bottom: 0.3em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .season-year {
+      color: #ff1744;
+      font-size: 1.18rem;
+      margin-bottom: 0.3em;
+      font-weight: 600;
+    }
+    .season-bio {
+      color: #eee;
+      font-size: 1.13rem;
+      margin-bottom: 0.7em;
+      min-height: 80px;
+    }
+    .season-quote {
+      color: #ffd700;
+      font-size: 1.13rem;
+      font-style: italic;
+      margin-top: 0.7em;
+      opacity: 0.92;
+    }
+    .episodes-list {
+      color: #ffb300;
+      font-size: 1.09rem;
+      margin: 0.7em 0 0.2em 0;
+      padding: 0;
+      list-style: none;
+    }
+    .episodes-list li {
+      margin-bottom: 0.2em;
+      color: #ffeb3b;
+      font-weight: bold;
+      font-size: 1.01em;
+    }
+    .episode-summary {
+      background: #222b;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #b71c1c33;
+      margin: 0.7em 0 0.7em 0;
+      padding: 1.1em 1em 1.1em 1em;
+      text-align: right;
+      color: #fff;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      border-right: 4px solid #ffd700;
+      border-left: 2px solid #b71c1c77;
+      font-family: 'Cairo', Tahoma, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div id="header-include"></div>
+<section class="episodes-hero">
+  <h1>حلقات صراع العروش</h1>
+  <p>
+    استكشف ملحمة Game of Thrones عبر مواسمها الثمانية، حيث تتصارع العائلات النبيلة، وتتشابك المؤامرات، وتظهر التنانين والسحر في عالم لا يرحم. كل موسم يحمل أحداثًا أسطورية، شخصيات لا تُنسى، ونهايات غير متوقعة!
+  </p>
+</section>
+<section class="seasons-grid">
+  <!-- الموسم الأول -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="الموسم الأول" class="season-img" />
+    <div class="season-title">الموسم الأول</div>
+    <div class="season-year">2011</div>
+    <div class="season-bio">
+      بداية الصراع على العرش الحديدي، حيث تتكشف الأسرار وتبدأ رحلة آل ستارك وآل لانستر في عالم ويستروس القاسي. نهاية الموسم بصدمة إعدام نيد ستارك.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 1: الشتاء قادم</b><br>
+      بداية ملحمية لعالم ويستروس، وصول الملك روبرت إلى وينترفيل، واكتشاف الذئاب الرهيبة. أول بذور الصراع تُزرع في الشمال.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 7: أنت تربح أو تموت</b><br>
+      نيد ستارك يواجه حقيقة أبناء روبرت، ويبدأ العد التنازلي للمأساة. أول مواجهة حقيقية مع قسوة كينغز لاندينغ.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 9: سقوط نيد ستارك</b><br>
+      صدمة الموسم: إعدام نيد ستارك أمام ابنته آريا، وانطلاق الحرب بين الشمال والجنوب.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 10: ولادة التنانين</b><br>
+      دينيريس تخرج من النار مع تنانينها الثلاثة، وبداية أسطورة جديدة في إيسوس.
+    </div>
+    <div class="season-quote">"When you play the game of thrones, you win or you die."</div>
+  </div>
+  <!-- الموسم الثاني -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="الموسم الثاني" class="season-img" />
+    <div class="season-title">الموسم الثاني</div>
+    <div class="season-year">2012</div>
+    <div class="season-bio">
+      حروب الملوك الخمسة تشتعل، معركة بلاك ووتر النارية، وصعود دينيريس في قارة إيسوس مع تنانينها الصغيرة.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 1: الشمال يتذكر</b><br>
+      روب ستارك يعلن الحرب على آل لانستر، وتبدأ التحالفات والمؤامرات في كل أرجاء ويستروس.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 4: حراس الشرق</b><br>
+      جون سنو يكتشف أسرار ما وراء الجدار، ودينيريس تواجه خيانة في قارة إيسوس.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 9: معركة بلاك ووتر</b><br>
+      معركة نارية أسطورية، تيريون يقود الدفاع عن كينغز لاندينغ بالنار الإغريقية، وتغير موازين القوى.
+    </div>
+    <div class="season-quote">"The night is dark and full of terrors."</div>
+  </div>
+  <!-- الموسم الثالث -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="الموسم الثالث" class="season-img" />
+    <div class="season-title">الموسم الثالث</div>
+    <div class="season-year">2013</div>
+    <div class="season-bio">
+      موسم "الزفاف الأحمر"، حيث تُكتب واحدة من أكثر اللحظات صدمة في تاريخ التلفزيون، وتتصاعد حدة الصراعات بين العائلات.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 3: طريق العقاب</b><br>
+      دينيريس تشتري جيش الأنسرلد وتحررهم، وتبدأ رحلتها كملكة حقيقية.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 4: وأين ذهبوا</b><br>
+      تيريون يصبح وزير المالية، وجيمي يفقد يده، وتتصاعد التوترات في الشمال.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 9: الزفاف الأحمر</b><br>
+      مذبحة الزفاف الأحمر: مقتل روب وكاتلين ستارك، وانهيار أمل الشمال في الاستقلال.
+    </div>
+    <div class="season-quote">"The Lannisters send their regards."</div>
+  </div>
+  <!-- الموسم الرابع -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="الموسم الرابع" class="season-img" />
+    <div class="season-title">الموسم الرابع</div>
+    <div class="season-year">2014</div>
+    <div class="season-bio">
+      موت الملك جوفري في الزفاف الأرجواني، محاكمة تيريون، معركة الجدار، وصعود بران لقواه الخارقة.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 2: الزفاف الأرجواني</b><br>
+      موت جوفري بشكل مفاجئ في حفل زفافه، وبدء التحقيقات والصراعات الجديدة.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 6: محاكمة تيريون</b><br>
+      تيريون يواجه محاكمة غير عادلة ويطالب بمحاكمة قتالية.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 9: معركة الجدار</b><br>
+      معركة ملحمية بين الحرس الليلي والهمج بقيادة مانس رايدر.
+    </div>
+    <div class="season-quote">"I demand a trial by combat!"</div>
+  </div>
+  <!-- الموسم الخامس -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="الموسم الخامس" class="season-img" />
+    <div class="season-title">الموسم الخامس</div>
+    <div class="season-year">2015</div>
+    <div class="season-bio">
+      دينيريس تحكم ميرين، جون سنو يواجه تمرد الحرس الليلي، وسيرسي تتعرض للعار في شوارع كينغز لاندينغ.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 4: أبناء الهاربي</b><br>
+      دينيريس تواجه تمرد أبناء الهاربي في ميرين، وتخسر أحد أقرب مستشاريها.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 8: هاردهوم</b><br>
+      معركة مرعبة ضد جيش الموتى بقيادة الوايت ووكرز، وجون سنو ينجو بأعجوبة.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 10: مشية العار</b><br>
+      سيرسي تُجبر على المشي عارية في شوارع كينغز لاندينغ، في مشهد لا يُنسى.
+    </div>
+    <div class="season-quote">"Shame... Shame... Shame!"</div>
+  </div>
+  <!-- الموسم السادس -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="الموسم السادس" class="season-img" />
+    <div class="season-title">الموسم السادس</div>
+    <div class="season-year">2016</div>
+    <div class="season-bio">
+      معركة النغل، عودة سانسا، انتقام آريا، وصعود جون سنو كملك الشمال في واحدة من أضخم معارك المسلسل.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 5: الباب (Hodor)</b><br>
+      اكتشاف سر هودور المؤلم، وتضحيته البطولية لإنقاذ بران.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 9: معركة النغل</b><br>
+      معركة ضخمة بين جون سنو ورامزي بولتون، وانتصار الشمال أخيرًا.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 10: تفجير سيبت بيلور</b><br>
+      سيرسي تدمر أعداءها بتفجير الكنيسة الكبرى، وتجلس على العرش الحديدي.
+    </div>
+    <div class="season-quote">"Hold the door!"</div>
+  </div>
+  <!-- الموسم السابع -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="الموسم السابع" class="season-img" />
+    <div class="season-title">الموسم السابع</div>
+    <div class="season-year">2017</div>
+    <div class="season-bio">
+      دينيريس تصل إلى ويستروس، لقاء التنانين مع جون سنو، سقوط الجدار، واقتراب المعركة الكبرى مع السائرين البيض.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 4: غنائم الحرب</b><br>
+      معركة نارية بين تنين دينيريس وجيش لانستر، مشهد بصري مذهل.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 6: ما وراء الجدار</b><br>
+      مجموعة الأبطال يواجهون الموتى خلف الجدار، وتنين دينيريس يُقتل ويُبعث من جديد.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 7: سقوط الجدار</b><br>
+      الوايت ووكرز يدمرون الجدار بتنينهم، وبداية النهاية.
+    </div>
+    <div class="season-quote">"The dragon and the wolf."</div>
+  </div>
+  <!-- الموسم الثامن -->
+  <div class="season-card">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="الموسم الثامن" class="season-img" />
+    <div class="season-title">الموسم الثامن</div>
+    <div class="season-year">2019</div>
+    <div class="season-bio">
+      النهاية الملحمية للصراع، معركة وينترفيل ضد السائرين البيض، وسقوط العرش الحديدي إلى الأبد.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 3: معركة وينترفيل</b><br>
+      معركة مظلمة وملحمية بين الأحياء وجيش الموتى، آريا تقتل ملك الليل في لحظة تاريخية.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 5: سقوط كينغز لاندينغ</b><br>
+      دينيريس تدمر المدينة بنيران التنين، ونهاية مأساوية للعديد من الشخصيات.
+    </div>
+    <div class="episode-summary">
+      <b>الحلقة 6: النهاية</b><br>
+      مصير العرش الحديدي يُحسم، وجون سنو ينفي نفسه للشمال، وبداية عهد جديد.
+    </div>
+    <div class="season-quote">"Fire and Blood."</div>
+  </div>
+</section>
+<div id="footer-include"></div>
+<script>
+fetch('../components/header.html').then(r=>r.text()).then(t=>document.getElementById('header-include').innerHTML=t);
+fetch('../components/footer.html').then(r=>r.text()).then(t=>document.getElementById('footer-include').innerHTML=t);
+</script>
+</body>
+</html> 

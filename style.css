@@ -1,0 +1,647 @@
+/* ملف التنسيقات الرئيسي */ 
+
+/* === Sword Slash Animation Styles === */
+#sword-container {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  width: 260px;
+  height: 600px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+#sword-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 16px #fff3) drop-shadow(0 0 32px #b71c1c);
+}
+#slash-line {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 6px;
+  height: 100vh;
+  background: linear-gradient(180deg, #ff1744 0%, #b71c1c 80%, transparent 100%);
+  box-shadow: 0 0 32px 8px #ff1744, 0 0 64px 16px #b71c1c;
+  border-radius: 3px;
+  transform: translateX(-50%) scaleY(0);
+  opacity: 0.85;
+  z-index: 1000;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.sword-animate {
+  animation: sword-drop 0.45s cubic-bezier(0.7,0,0.3,1) forwards;
+  opacity: 1 !important;
+}
+.slash-animate {
+  animation: slash-grow 0.18s cubic-bezier(0.7,0,0.3,1) 0.22s forwards;
+}
+@keyframes sword-drop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    top: 60vh;
+    opacity: 1;
+  }
+}
+@keyframes slash-grow {
+  0% {
+    transform: translateX(-50%) scaleY(0);
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.1);
+    opacity: 0;
+  }
+}
+/* === End Sword Slash Animation Styles === */ 
+
+/* === Slash Overlay Styles === */
+#slash-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, #000 80%, #2d0606 100%);
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.7s cubic-bezier(0.7,0,0.3,1);
+  pointer-events: all;
+}
+#slash-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+/* === End Slash Overlay Styles === */ 
+
+/* === Hero Section Styles === */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(24,24,24,0.7), rgba(24,24,24,0.7)), url('../images/Game of Thrones - Wallpaper.jpeg') center center/cover no-repeat;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.hero-bg {
+  display: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 16px #000, 0 0 8px #b71c1c;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 18px;
+}
+.hero-quote {
+  font-size: 1.4rem;
+  margin-bottom: 28px;
+  color: #ffb300;
+  font-style: italic;
+}
+.hero-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #b71c1c 40%, #222 100%);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 24px rgba(183,28,28,0.2);
+  border: none;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.hero-btn:hover {
+  background: linear-gradient(90deg, #222 40%, #b71c1c 100%);
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 8px 32px #b71c1c99;
+}
+
+/* === Sections Grid === */
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.2rem;
+  padding: 3rem 2vw 4rem 2vw;
+  background: transparent;
+  z-index: 2;
+  margin: 0 auto 32px auto;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.section-card {
+  background: #222b;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px #000a, 0 0 0 2px #b71c1c44;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.section-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: grayscale(0.2) brightness(0.85);
+  transition: filter 0.2s;
+}
+.section-card:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+.section-card:hover img {
+  filter: grayscale(0) brightness(1);
+}
+.section-card h2 {
+  font-family: 'Cinzel', serif;
+  margin: 0.7em 0 0.3em 0;
+  font-size: 1.5rem;
+  color: #ff1744;
+}
+.section-card p {
+  font-size: 1.05rem;
+  margin-bottom: 1.2em;
+  color: #eee;
+}
+.sections-grid a.section-card {
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.3s, color 0.2s;
+}
+.sections-grid a.section-card:hover {
+  color: #b71c1c;
+  box-shadow: 0 8px 32px #b71c1c55;
+}
+
+/* === Header & Footer === */
+#main-header {
+  background: #181818;
+  color: #fff;
+  padding: 0.7em 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #b71c1c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.logo-sword {
+  width: 38px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px #b71c1c);
+}
+.got-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #ff1744;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.3em 0.7em;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s;
+}
+.nav-links a:hover {
+  background: #b71c1c;
+  color: #fff;
+}
+#main-footer {
+  background: #181818;
+  color: #fff;
+  text-align: center;
+  padding: 1.2em 0 1em 0;
+  border-top: 2px solid #b71c1c;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* خطوط العناوين (يمكنك إضافة خط Cinzel من Google Fonts لو أردت) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero-content h1 { font-size: 2.1rem; }
+  .sections-grid { grid-template-columns: 1fr; }
+  #main-header { flex-direction: column; gap: 0.7em; }
+  .logo-sword { height: 40px; }
+} 
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+#back-to-top:hover {
+  background: #b71c1c;
+  transform: scale(1.1) rotate(-10deg);
+} 
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.fade-in.loaded {
+  opacity: 1;
+} 
+
+.got-about-section, .got-bottom-section, .got-music-section {
+  background: #181818;
+  color: #f5f5f5;
+  margin: 32px auto 32px auto;
+  padding: 32px 24px;
+  border-radius: 18px;
+  max-width: 900px;
+  box-shadow: 0 6px 36px #b71c1c33, 0 0 0 6px #b71c1c22, 0 0 18px 4px #b71c1c44;
+  font-size: 1.13rem;
+  line-height: 1.9;
+}
+.got-about-section h2 {
+  color: #b71c1c;
+  margin-bottom: 18px;
+  font-size: 2.1rem;
+  text-align: center;
+}
+.got-about-section ul {
+  margin: 18px 0 18px 0;
+  padding: 0 0 0 18px;
+}
+.got-about-section li {
+  margin-bottom: 10px;
+  padding-right: 0;
+  list-style: disc inside;
+}
+.got-about-section b {
+  color: #ffb300;
+} 
+
+body {
+  background: #111 !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+#header-include, #footer-include {
+  background: #181818;
+} 
+
+.got-bottom-section {
+  background: #181818;
+  color: #f5f5f5;
+  margin: 48px auto 0 auto;
+  padding: 40px 24px 32px 24px;
+  border-radius: 18px;
+  max-width: 900px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  font-size: 1.15rem;
+  line-height: 2;
+  text-align: center;
+}
+.got-bottom-section h2 {
+  color: #b71c1c;
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+.got-bottom-section h3 {
+  color: #ffb300;
+  margin: 32px 0 16px 0;
+  font-size: 1.3rem;
+}
+.got-quotes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.got-quotes blockquote {
+  background: #222;
+  color: #ffebee;
+  border-left: 4px solid #b71c1c;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-style: italic;
+  font-size: 1.1rem;
+  min-width: 180px;
+  max-width: 260px;
+  margin: 0;
+  box-shadow: 0 0 0 2px #b71c1c55, 0 0 12px 2px #b71c1c99, 0 2px 12px #b71c1c22;
+}
+.got-facts {
+  text-align: right;
+  margin: 0 auto 18px auto;
+  max-width: 600px;
+  padding: 0 0 0 18px;
+}
+.got-facts li {
+  margin-bottom: 10px;
+  color: #ffe082;
+  list-style: disc inside;
+  font-size: 1.05rem;
+}
+.got-bottom-links {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.got-bottom-links a {
+  background: #b71c1c;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px #0003;
+}
+.got-bottom-links a:hover {
+  background: #ffb300;
+  color: #222;
+  transform: scale(1.07);
+} 
+
+.got-world-section, .got-characters-section, .got-production-section, .got-books-section, .got-music-section, .got-about-section, .got-bottom-section {
+  background: linear-gradient(135deg, #101012 80%, #1a1a1a 100%);
+  color: #fff;
+  margin: 40px auto 0 auto;
+  padding: 36px 24px 28px 24px;
+  border-radius: 22px;
+  max-width: 950px;
+  box-shadow: 0 0 0 4px #b71c1c55, 0 0 24px 6px #b71c1c99, 0 6px 36px #b71c1c33;
+  font-size: 1.13rem;
+  line-height: 1.9;
+  text-align: right;
+  border: 1.5px solid #222;
+}
+.got-world-section h2, .got-characters-section h2, .got-production-section h2, .got-books-section h2, .got-music-section h2, .got-about-section h2, .got-bottom-section h2 {
+  color: #b71c1c;
+  margin-bottom: 22px;
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.got-world-section ul, .got-characters-section ul, .got-production-section ul, .got-books-section ul, .got-music-section ul, .got-about-section ul, .got-bottom-section ul {
+  margin: 18px 0 0 0;
+  padding: 0 0 0 18px;
+}
+.got-world-section li, .got-characters-section li, .got-production-section li, .got-books-section li, .got-music-section li, .got-about-section li, .got-bottom-section li {
+  margin-bottom: 10px;
+  list-style: disc inside;
+  color: #eee;
+  border-right: 3px solid #ffb300cc;
+  padding-right: 8px;
+  background: rgba(24,24,24,0.18);
+  border-radius: 6px;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.got-world-section li b, .got-characters-section li b, .got-production-section li b, .got-books-section li b, .got-music-section li b, .got-about-section li b, .got-bottom-section li b {
+  color: #ffb300;
+}
+.got-world-section li:hover, .got-characters-section li:hover, .got-production-section li:hover, .got-books-section li:hover, .got-music-section li:hover, .got-about-section li:hover, .got-bottom-section li:hover {
+  background: rgba(40,10,10,0.22);
+  color: #fff;
+  border-right: 3px solid #b71c1c;
+}
+.got-characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  margin-top: 18px;
+}
+.got-characters-grid div {
+  background: rgba(24, 24, 24, 0.72);
+  border: 1.5px solid #ffb300cc;
+  border-radius: 14px;
+  padding: 22px 12px 18px 12px;
+  box-shadow: 0 2px 18px #b71c1c22, 0 0 0 1px #222 inset;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #eee;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+.got-characters-grid div b {
+  color: #ffb300;
+  font-size: 1.13rem;
+  letter-spacing: 0.5px;
+}
+.got-characters-grid div:hover {
+  background: rgba(40, 10, 10, 0.92);
+  border-color: #b71c1c;
+  color: #fff;
+  box-shadow: 0 8px 32px #b71c1c77, 0 0 0 2px #b71c1c inset;
+  transform: scale(1.045) rotate(-1deg);
+  z-index: 2;
+} 
+
+/* === Simple GOT Logo Styles === */
+.simple-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-left: 0.5em;
+}
+.simple-sword {
+  width: 36px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #b71c1c44);
+}
+.simple-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ff1744;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.simple-title:hover {
+  color: #b71c1c;
+  text-shadow: 0 2px 12px #b71c1c44;
+}
+/* Remove previous logo styles for clarity */
+.got-legendary-logo, .legendary-sword, .legendary-title-bg, .legendary-title, .got-logo-epic, .logo-sword-epic, .got-title-epic, .logo-sword, .got-title { display: none !important; } 
+
+/* === Legendary Footer Styles === */
+.legendary-footer {
+  background: transparent;
+  border-top: none;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  z-index: 10;
+}
+.footer-glass {
+  margin: 0 auto;
+  max-width: 900px;
+  background: rgba(24, 18, 18, 0.38);
+  box-shadow: 0 0 32px 8px #b71c1c55, 0 0 0 6px #ffd70033, 0 0 32px 8px #ff174444, 0 2px 32px #fff2;
+  border-radius: 24px 24px 0 0;
+  border-top: 2.5px solid #ffd700cc;
+  border-bottom: 2.5px solid #b71c1c;
+  padding: 32px 18px 18px 18px;
+  backdrop-filter: blur(7px) saturate(1.2);
+  -webkit-backdrop-filter: blur(7px) saturate(1.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  margin: 0.2em 0;
+}
+.footer-sword {
+  width: 32px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px #b71c1c99) drop-shadow(0 0 16px #ffd70099);
+  margin-left: 0.5em;
+}
+.footer-site {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: #ffebee;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-shadow: 0 2px 12px #b71c1c44;
+}
+.footer-designer {
+  font-size: 1.1rem;
+  color: #ffd700;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  letter-spacing: 1px;
+}
+.footer-coda {
+  font-family: 'Cinzel', serif;
+  color: #ff1744;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #b71c1c99, 0 0 8px #ffd70099;
+  font-weight: 900;
+}
+.footer-quote {
+  font-size: 1.05rem;
+  color: #fff;
+  font-style: italic;
+  text-shadow: 0 2px 12px #b71c1c44, 0 0 8px #ffd70044;
+  margin-top: 0.2em;
+}
+.footer-social {
+  gap: 1.2em;
+  margin-top: 0.5em;
+}
+.footer-social-icon {
+  font-family: 'Font Awesome 5 Free', 'Arial', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #ffd700;
+  background: rgba(24,24,24,0.7);
+  border-radius: 50%;
+  padding: 0.25em 0.45em;
+  margin: 0 0.1em;
+  box-shadow: 0 2px 8px #b71c1c44;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.2s;
+  display: inline-block;
+}
+.footer-social-icon:hover {
+  color: #ff1744;
+  background: #ffd70033;
+  box-shadow: 0 0 16px #ff1744cc, 0 0 8px #ffd70099;
+  transform: scale(1.13) rotate(-4deg);
+}
+/* Footer social app icon images */
+.footer-img-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #181818;
+  box-shadow: 0 2px 8px #b71c1c44;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer-social-icon:hover .footer-img-icon {
+  box-shadow: 0 0 16px #ff1744cc, 0 0 8px #ffd70099;
+  transform: scale(1.13) rotate(-4deg);
+}
+@media (max-width: 700px) {
+  .footer-glass { max-width: 99vw; padding: 18px 2vw 10px 2vw; }
+  .footer-site { font-size: 1.05rem; }
+  .footer-sword { width: 22px; height: 26px; }
+  .footer-coda { font-size: 1em; }
+  .footer-social-icon { font-size: 1.1rem; padding: 0.18em 0.3em; }
+} 
